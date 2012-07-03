@@ -1,0 +1,157 @@
+/* CSS RESETS
+-----------------------------------------  */
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit}del,ins{text-decoration:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}input,button,textarea,select{*font-size:100%}input {border: none;}
+.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
+
+
+/* DEFAULTS
+-----------------------------------------  */
+html {
+	background-color: #f9f9f9;
+	background: url('../images/page_bg.png') repeat;
+	}
+	
+body { height: 100%; overflow-x:hidden; overflow-y: scroll; }
+p { font: 17px/24px arial, sans-serif; font-weight: 100; color: #222; text-shadow: 0.7px 0.9px 1px rgba(256, 256, 256, 1.0);}
+a { color: #778ae5; }
+a:hover {color: red; }
+#header {
+	height: 66px;
+	width: 100%;
+	background: transparent url('../images/header_bg.png') repeat-x;
+	position: fixed;
+	z-index: 100;
+	top: 0px;
+	}
+	#logo { margin: 10px 5px; }
+
+#container {
+	width: 1020px;
+	height: 100%;
+	min-height: 750px;
+	margin: 0 auto;
+	position: relative;
+	top: 70px;
+	color: #5c0f00;
+	text-align: center;
+	text-shadow: 1px 5px 3px rgba(42,42,42,0.1);
+	}
+
+#footer {
+	width: 100%;
+	height: 142px;
+	position: fixed;
+	bottom: 0px;
+	background: transparent url('../images/footer_bg.png') repeat-x;
+	}
+	#copyright {
+		width: 200px;
+		text-align: center;
+		margin: 0 auto;
+		color: #535353;
+		position: relative;
+		top: 50px;
+		}
+	#copyright a { font: 17px/24px arial, sans-serif; color: #b4b4b4; text-decoration: none; }
+h1, h2 { font-family: Amaranth, sans-serif; font-size: 41px; margin: 10px 0px; }
+h2 { font-size: 22px; }
+
+.hidden { display: none; }
+
+/* Splash Page
+-----------------------------------------  */
+#firstIntro  { font-size: 30px;}
+#infoGraphic { margin: 0px auto; margin-bottom: 1px;}
+#want2Try    { font-size: 55px; }
+#urlChoose   { font-size: 29px; margin-top: 20px; }
+
+#registerForm {
+	width: 440px;
+	margin: 3px auto;
+	text-align: center;
+	}
+	#registerForm input[type=text] {
+		border: 1px solid #c1c1c1;
+		height: 21px;
+		width: 150px;
+		padding: 2px;
+		margin: 5px 10px;
+		float: left;
+		font-size: 20px;
+		font-family: Raleway, sans-serif;
+		}
+	
+	#registerForm input[type=submit] {
+		height: 85px;
+		width: 208px;
+		clear: both;
+		background: url('../images/startNow.png') 0px 8px no-repeat;
+		
+		font-family: Raleway, sans-serif;
+		color: white;
+		font-size: 25px;
+		font-weight: 800;
+		cursor: pointer;
+		margin-top: 10px;
+		opacity: 0.85;
+		}
+		#registerForm input[type=submit]:hover {
+			opacity: 1.0;
+			}
+
+.urlBox {
+	font-family: Raleway, sans-serif;
+	color: #010712;
+	font-size: 31px;
+	float: left;
+	}
+	#pageSlug { float: left; }
+	.urlBox .stageRight {  }
+.validate { color: red; }
+
+/* User Page
+-----------------------------------------  */
+#userPage { text-align: left; }
+	#userPage h1 { text-align: center; }
+#preview { width: 700px; height: 100px; float: right; text-align: center;}
+#preview  a.remove { font-size: 21px; color: red; text-decoration: none; z-index: 100; }
+#instructions {
+	padding: 5px;
+	width: 300px;
+	float: left;
+	background: transparent rgba(250, 250, 250, 0.6);
+	border-radius: 4px;
+	}
+	#instructionsContainer {
+		background-color: white;
+		background-color: rgba(250,250,250,0.6);
+		box-shadow: 0px 0px 10px rgba(65, 65, 80, 0.2);
+		border-radius: 2px;
+		padding: 1px 9px 9px;
+		}
+#fauxSavedPage,
+iframe {
+	width: 685px;
+	height: 400px;
+	border: none;
+	padding: 0px;
+	background-color: white;
+	background-color: rgba(250,250,250,0.6);
+	margin: 0 auto;
+	margin-top:3px;
+	border: 1px solid rgba(65, 65, 80, 0.2);
+	box-shadow: 0px -7px 30px rgba(65, 65, 80, 0.2);
+	-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.6, transparent), to(white));
+	-webkit-border-radius: 3px;
+	}
+	iframe { opacity: 0.7; }
+	#fauxSavedPage {
+		padding: 50px;
+		width: 585px;
+		height: 300px;
+		margin-top: 13px;
+		}
+	#fauxSavedPage h2 { color: rgba(42,42,42, 0.3); text-shadow: none; }
+	
